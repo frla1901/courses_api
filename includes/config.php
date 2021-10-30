@@ -28,7 +28,7 @@ define("DBDATABASE", "moment5");
 // db inställningar publikt (inleed webhotel - domain frida360)
 define("DBHOST", "localhost");
 define ("DBUSER", "frida360_admin-api");
-define ("DBPASS", "dt173g_moment5_2021 ");
+define ("DBPASS", "dt173g_moment5_2021");
 define("DBDATABASE", "frida360_courses-api");
 }
 ?>
