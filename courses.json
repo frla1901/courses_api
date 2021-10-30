@@ -1,0 +1,74 @@
+[{
+    "courseCode": "DT057G",
+    "courseName": "Webbutveckling I",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22782"
+},
+{
+    "courseCode": "DT084G",
+    "courseName": "Introduktion till programmering i JavaScript",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=30811"
+},
+{
+    "courseCode": "GD008G",
+    "courseName": "Typografi och form för webb",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=24399"
+},
+{
+    "courseCode": "DT163G",
+    "courseName": "Digital bildbehandling för webb",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=24403"
+},
+{
+    "courseCode": "DT003G",
+    "courseName": "Databaser",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=21595"
+},
+{
+    "courseCode": "DT093G",
+    "courseName": "Webbutveckling II",
+    "progression": "B",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=27133"
+},
+{
+    "courseCode": "DT162G",
+    "courseName": "Javascript-baserad webbutveckling",
+    "progression": "B",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=24366"
+},
+{
+    "courseCode": "DT068G",
+    "courseName": "Webbanvändbarhet",
+    "progression": "B",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=30563"
+},
+{
+    "courseCode": "IK060G",
+    "courseName": "Projektledning",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=27003"
+},
+{
+    "courseId": "IG021G",
+    "courseName": "Affärsplaner och kommersialisering",
+    "progression": "A",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22183"
+},
+{
+    "courseId": "DT152G",
+    "courseName": "Webbdesign för CMS",
+    "progression": "B",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22324"
+},
+
+{
+    "courseCode": "DT173G",
+    "courseName": "Webbutveckling III",
+    "progression": "B",
+    "courseSyllabus":"https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22706"
+}
+]
