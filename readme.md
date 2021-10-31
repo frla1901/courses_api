@@ -78,18 +78,21 @@ För att använda CRUD följ länkarna nedan:
 
 #### Create = POST (ny kurs)
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
-
+'{"courseCode"="DT073G", "courseName"="Webbutveckling III", "progression"="B","courseSyllabus"="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22706"
 #### Read = GET (alla kurser)
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
 
-#### Update - PUT (en specifik kurs – id skickas med exempelvis 2)
-[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=2 ) 
+#### Read = GET (en specifik kurs – id skickas med exempelvis 1)
+[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=1 ) 
 
-#### Delete = DELETE (en specifik kurs – id skickas med exempelvis 2)
-[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=2 ) 
+#### Update - PUT (en specifik kurs – id skickas med exempelvis 1)
+[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=1 ) 
+'{"courseCode"="DT073G", "courseName"="Webbutveckling III", "progression"="B","courseSyllabus"="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22706"
 
-Read = GET (en specifik kurs – id skickas med exempelvis 2)
-[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=2 ) 
+#### Delete = DELETE (en specifik kurs – id skickas med exempelvis 1)
+[https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=1 ) 
+ 
+
 
 
 
