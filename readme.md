@@ -21,27 +21,27 @@
 4. Källkoden ska vara väl kommenterad, och publicerad till ett online repository som exempelvis Github eller Git bucket.
 5. En README-fil ska finnas i ditt repo som beskriver din webbtjänst, samt inkluderar URI's (webblänkar) för att använda CRUD.
 
-**OBS!**
+#### OBS!
 I steg 1 av moment 5 har jag inte använt gulp utan arbetat lokalt med Mamp, phpmyAdmin, VSC samt testkört i webbläsaren Chrome samt med Advanced Rest Client. Publiceringen gjordes genom mitt webbhotell hos Inleed, phpmyAdmin samt FileZilla (ftp överföring av filer) och därefter testkördes allt igen i webbläsaren Chrome samt med Advanced Rest Client.
 
-**Grund**
+#### Grund
 Jag hade sen kursen DT162G - Javascriptbaserad webbutveckling, en halvklar JSON-fil med kurser som jag initialt justerade för att ha all information som ska finnas med i webbtjänsten. Denna kommer inte att användas som något annat än ett underlag men hjälpte mig att strukturera upp vilka olika delar som ska inkluderas. 
 
 Därefter klonade jag ner det repo som fanns under teori och läshänvisningar för att ha en grund att utgå ifrån. Valde att döpa om den till api.php istället för rest.php.
 [https://github.com/MallarMiun/Grund-for-webbtjanst.git](https://github.com/MallarMiun/Grund-for-webbtjanst.git) 
 
 
-**1.**
+##### 1.
 När jag testat att api.php fungerade skapade jag en databas lokalt på datorn _"moment5"_ med en databas användare: _"rest"_ och lösenord: _"Password"_ dock utan några tabeller. 
-Gjorde allt som ett test initialt och följde de videos som fanns under teori och läshänvisningar samt mötestider. Skapade en mapp includes för att kunna inkludera filer. Där placerade jag en fil config.php som bland annat innehåller inställningar för databasanslutning under utveckling devMode samt vid publicering. 
+Gjorde allt som ett test initialt och följde de videos som fanns under teori och läshänvisningar samt mötestider. Skapade en mapp includes för att kunna inkludera filer. Där placerade jag en fil config.php som bland annat innehåller inställningar för databasanslutning samt variabeln $devMode= true; för utveckling som sätts till false vid publicering. 
 
-Därefter skapade jag en install-fil samt en .htaccess fil. I install.php finns mysqli databasanslutning samt sql frågor som dels skapar tabellen courses samt lägger till rader i tabellen. 
-Denna fil kan användas av alla som vill testa att återskapa i en egen lokal eller publik databas. 
+Därefter skapade jag en install-fil samt en .htaccess fil. I install.php finns mysqli databasanslutning samt sql frågor som dels skapar tabellen courses samt lägger till rader i tabellen. Denna fil kan användas av alla som vill testa att återskapa i en egen lokal eller publik databas. 
 
 När jag fått det att fungera i testet så gick jag vidare till att skapa CRUD funktionaliteten. 
 
-**2.** 
+##### 2.
 Skapade först en mapp classes i includes mappen och där jag påbörjad arbetet med filen Course.class.php. Denna fil innehåller metoder och funktioner som sen ska användas i webbtjänsten. Se nedan funktionsspecifikation: 
+
 * Lägg till kurs (POST) använder SQL fråga INSERT 
 * Uppdatera kurs (PUT) använder SQL fråga UPDATE samt parametern id.
 * Hämta alla kurser (GET) använder SQL fråga SELECT 
@@ -51,13 +51,14 @@ Skapade först en mapp classes i includes mappen och där jag påbörjad arbetet
 Nästa steg var att arbeta med själva api filen för att kunna implementera CRUD. 
 Klassen Course instantieras samt metoder för respektive verb GET, POST, PUT och DELETE tydliggör den data jag ska presentera i JSON format.
 
-**3.**
+ ##### 3.
 Webbtjänsten är publicerad till mitt webbhotell där den kan testköras och användas. Se nedan länk samt information.
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
 
-En databas hos mitt webbhotell ligger till grund för detta api och jag 
+En databas _frida360_courses-api_ som jag skapade hos mitt webbhotell Inleed ligger till grund för detta api. 
+Justerade informationen i config.php så att den nya databasens var korrekta samt ändrade $devmode till false innan jag skickade över källkodsfilerna publikt via Filezilla. 
 
-Det går även att klona detta repo och skapa en egen databas som jag nämnde i punkt 1. 
+Det går att klona detta repo och skapa en egen databas som jag nämnde i punkt 1. 
 Följ dessa steg: 
 
 1. klona repo
@@ -67,24 +68,24 @@ Följ dessa steg:
 5. lägg till install i adressraden för att installera databasanslutningen samt tabellen courses samt dess innehåll (12 rader).
 6. testa funktionaliteten i t.ex. Advanced Rest Client. 
 
-**4.**
+##### 4.
 Koden komenterades löpande under arbete samt kontrollerades innan publicering. I detta repo finns alla källkodsfiler som använts. 
 
-**5.**
+##### 5.
 Denna fil är skapad och fungerar som en beskrivning av min webbtjänst. 
 
 För att använda CRUD följ länkarna nedan:
 
-**C**reate = POST (ny kurs)
+#### Create = POST (ny kurs)
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
 
-**R**ead = GET (alla kurser)
+#### Read = GET (alla kurser)
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
 
-**U**pdate - PUT (en specifik kurs – id skickas med exempelvis 2)
+#### Update - PUT (en specifik kurs – id skickas med exempelvis 2)
 [https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=2 ) 
 
-**D**elete = DELETE (en specifik kurs – id skickas med exempelvis 2)
+#### Delete = DELETE (en specifik kurs – id skickas med exempelvis 2)
 [https://www.frida360.se/courses-api/api?id=2]( https://www.frida360.se/courses-api/api?id=2 ) 
 
 Read = GET (en specifik kurs – id skickas med exempelvis 2)
