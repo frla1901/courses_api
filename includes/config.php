@@ -3,7 +3,7 @@
 * Konfiguration för databasanslutning
 */
 
-// variabel under uveckling av webbtjänst - sätts till false vid publicering
+// variabel som under uveckling av webbtjänst är true - sätts till false vid publicering
 $devMode = false;
 
 // Fel rapportering under utveckling (devMode)

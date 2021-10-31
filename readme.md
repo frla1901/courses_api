@@ -5,11 +5,11 @@
 ## Syftet 
 
 ### Denna webbtjänst har som syfte att hantera information om kurser jag genomfört. Informationen om kurserna är följande:
-* **id (id)** 
-* **Kurskod (courseCode)** 
-* **Kursnamn (courseName)**
-* **Progression (progression)**
-* **Kursplan (courseSyllabus)**
+* **id (id)** (automatiserad indexering)
+* **Kurskod (courseCode)** (textsträng)
+* **Kursnamn (courseName)** (textsträng)
+* **Progression (progression)** (textsträng)
+* **Kursplan (courseSyllabus)** (textsträng som är en länk)
 
 ## Funktionalitet
 
@@ -22,7 +22,7 @@
 5. En README-fil ska finnas i ditt repo som beskriver din webbtjänst, samt inkluderar URI's (webblänkar) för att använda CRUD.
 
 **OBS!**
-I steg 1 av moment 5 har jag inte använt gulp utan arbetat lokalt med Mamp, phpmyAdmin, VSC samt testkört i webbläsaren Chrome samt med Advanced Rest Client. Publiceringen gjordes genom mitt webbhotell hos Inleed, phpmyAdmin samt FilwZilla (ftp överföring av filer) och därefter testkördes allt igen i webbläsaren Chrome samt med Advanced Rest Client.
+I steg 1 av moment 5 har jag inte använt gulp utan arbetat lokalt med Mamp, phpmyAdmin, VSC samt testkört i webbläsaren Chrome samt med Advanced Rest Client. Publiceringen gjordes genom mitt webbhotell hos Inleed, phpmyAdmin samt FileZilla (ftp överföring av filer) och därefter testkördes allt igen i webbläsaren Chrome samt med Advanced Rest Client.
 
 **Grund**
 Jag hade sen kursen DT162G - Javascriptbaserad webbutveckling, en halvklar JSON-fil med kurser som jag initialt justerade för att ha all information som ska finnas med i webbtjänsten. Denna kommer inte att användas som något annat än ett underlag men hjälpte mig att strukturera upp vilka olika delar som ska inkluderas. 
@@ -35,7 +35,8 @@ Därefter klonade jag ner det repo som fanns under teori och läshänvisningar f
 När jag testat att api.php fungerade skapade jag en databas lokalt på datorn _"moment5"_ med en databas användare: _"rest"_ och lösenord: _"Password"_ dock utan några tabeller. 
 Gjorde allt som ett test initialt och följde de videos som fanns under teori och läshänvisningar samt mötestider. Skapade en mapp includes för att kunna inkludera filer. Där placerade jag en fil config.php som bland annat innehåller inställningar för databasanslutning under utveckling devMode samt vid publicering. 
 
-Därefter skapade jag en install-fil samt en .htaccess fil. I install.php finns mysqli databasanslutning samt sql frågor som dels skapar tabellen courses samt lägger till rader i tabellen. Denna fil kan användas av alla som vill testa. 
+Därefter skapade jag en install-fil samt en .htaccess fil. I install.php finns mysqli databasanslutning samt sql frågor som dels skapar tabellen courses samt lägger till rader i tabellen. 
+Denna fil kan användas av alla som vill testa att återskapa i en egen lokal eller publik databas. 
 
 När jag fått det att fungera i testet så gick jag vidare till att skapa CRUD funktionaliteten. 
 
@@ -48,11 +49,23 @@ Skapade först en mapp classes i includes mappen och där jag påbörjad arbetet
 * Radera en specifik kurs (DELETE) använder SQL frågan DELETE samt parametern id. 
 
 Nästa steg var att arbeta med själva api filen för att kunna implementera CRUD. 
-Klassen Course instantieras samt metoder för respektive verb GET, POST, PUT och DELETE tydliggör data i JSON format.
+Klassen Course instantieras samt metoder för respektive verb GET, POST, PUT och DELETE tydliggör den data jag ska presentera i JSON format.
 
 **3.**
 Webbtjänsten är publicerad till mitt webbhotell där den kan testköras och användas. Se nedan länk samt information.
 [https://www.frida360.se/courses-api/api]( https://www.frida360.se/courses-api/api)
+
+En databas hos mitt webbhotell ligger till grund för detta api och jag 
+
+Det går även att klona detta repo och skapa en egen databas som jag nämnde i punkt 1. 
+Följ dessa steg: 
+
+1. klona repo
+2. skapa en egen databas på valfri domän
+3. justera inställningarna för databasen (DBHOST, DBUSER, DBPASS, DBDATABASE) i config.php filen. 
+4. om utvecklingsdatabas ändra $devMode = true i config.php filen;
+5. lägg till install i adressraden för att installera databasanslutningen samt tabellen courses samt dess innehåll (12 rader).
+6. testa funktionaliteten i t.ex. Advanced Rest Client. 
 
 **4.**
 Koden komenterades löpande under arbete samt kontrollerades innan publicering. I detta repo finns alla källkodsfiler som använts. 
