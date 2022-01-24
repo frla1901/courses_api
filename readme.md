@@ -15,11 +15,11 @@
 
 ### Följande funktionalitet ska finnas i din lösning för godkänt:
 
-1. Webbtjänst skapad enligt kraven ovan. Data från webbtjänsten ska presenteras i JSON-format.
-2. Implementerat CRUD (Create Read Update Delete) som använder följande verb: GET, POST, PUT och DELETE.
-3. Webbtjänsten ska vara publicerad på publikt tillgänglig webbhost, med möjlighet till "cross origin request). Det ska vara möjligt att testköra din webbtjänst från annan domän än den du publicerat till.
-4. Källkoden ska vara väl kommenterad, och publicerad till ett online repository som exempelvis Github eller Git bucket.
-5. En README-fil ska finnas i ditt repo som beskriver din webbtjänst, samt inkluderar URI's (webblänkar) för att använda CRUD.
+A. Webbtjänst skapad enligt kraven ovan. Data från webbtjänsten ska presenteras i JSON-format.
+B. Implementerat CRUD (Create Read Update Delete) som använder följande verb: GET, POST, PUT och DELETE.
+C. Webbtjänsten ska vara publicerad på publikt tillgänglig webbhost, med möjlighet till "cross origin request). Det ska vara möjligt att testköra din webbtjänst från annan domän än den du publicerat till.
+D. Källkoden ska vara väl kommenterad, och publicerad till ett online repository som exempelvis Github eller Git bucket.
+E. En README-fil ska finnas i ditt repo som beskriver din webbtjänst, samt inkluderar URI's (webblänkar) för att använda CRUD.
 
 #### OBS!
 I steg 1 av moment 5 har jag inte använt gulp utan arbetat lokalt med Mamp, phpmyAdmin, VSC samt testkört i webbläsaren Chrome samt med Advanced Rest Client. Publiceringen gjordes genom mitt webbhotell hos Inleed, phpmyAdmin samt FileZilla (ftp överföring av filer) och därefter testkördes allt igen i webbläsaren Chrome samt med Advanced Rest Client.
